@@ -9,7 +9,7 @@ import page.Loginpage;
 
 public class ValidLogin extends BaseTest
 {
-@Test(priority=1, groups= {"smoke","Login"})
+@Test(priority=1, groups= {"smoke" ,"Login"})
 
 public void testValidLogin()
 {
@@ -22,6 +22,6 @@ public void testValidLogin()
 	l.setPassword(pw);
 	l.clickLogin();
 	EnterTimeTrackpage e=new EnterTimeTrackpage(driver);
-	
+	e.verifyTitle(driver, eTitle);
 }
 }
